@@ -1,0 +1,9 @@
+{
+	"manifest_version": 2,
+	"name": "IE11 Death Clock",
+	"version": "0.0.1",
+	"description": "A clock to track the remaining life of IE11",
+	"chrome_url_overrides": {
+		"newtab": "countdown.html"
+	}
+}
