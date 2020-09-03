@@ -31,8 +31,31 @@
 				align-items: center;
 				justify-content: center;
 			}
+
+			#bg {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				display: flex;
+				align-items:flex-end;
+			}
+
+			#bg span {
+				display: block;
+				min-height:1px;
+				height:calc((var(--timeVal) / var(--totalVal)) * 100%);
+				background:#fbfbfb;
+				width:calc(100% / 6);
+				transition:height 0.5s;
+			}
+
 			#counter {
 				font-size: 3.2rem;
+				border-radius:10px;
+				padding:12px;
+				background-color:#fff;
 			}
 
 			#counter span {
@@ -59,7 +82,7 @@
 				transform-origin: 0 100%;
 				border-bottom: 1px solid #000;
 				padding-bottom: 3px;
-				letter-spacing:0.05em;
+				letter-spacing: 0.05em;
 			}
 
 			#counter span:last-child {
@@ -72,6 +95,14 @@
 		</style>
 	</head>
 	<body>
+		<div id="bg">
+			<span class="bg-years" data-key="years"></span>
+			<span class="bg-months" data-key="months" style="--totalVal: 12;"></span>
+			<span class="bg-days" data-key="days" style="--totalVal: 31;"></span>
+			<span class="bg-hours" data-key="hours" style="--totalVal: 24;"></span>
+			<span class="bg-minutes" data-key="minutes" style="--totalVal: 60;"></span>
+			<span class="bg-seconds" data-key="seconds" style="--totalVal: 60;"></span>
+		</div>
 		<div id="counter">
 			<span class="years" data-key="years">-</span>
 			<span class="months" data-key="months">-</span>
@@ -79,7 +110,7 @@
 			<span class="hours" data-key="hours">-</span>
 			<span class="minutes" data-key="minutes">-</span>
 			<span class="seconds" data-key="seconds">-</span>
-			<span class="ms" data-key="ms">-</span>
+			<!-- <span class="ms" data-key="ms">-</span> -->
 		</div>
 
 		<script src="js/script.js" content="self"></script>
