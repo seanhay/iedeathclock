@@ -1,23 +1,33 @@
 const endDate = new Date("2021-08-17")
 let counterBox = document.getElementById("counter")
+let bgBox = document.getElementById("bg")
+
+setTimerObj()
 
 setInterval(() => {
-	let nowDate = new Date()
-	let timeDiff = countdown(nowDate, endDate)
 	// counterBox.textContent = `${timeDiff.years}/${timeDiff.months}/${timeDiff.days}/${timeDiff.hours}/${timeDiff.minutes}/${timeDiff.seconds}/${timeDiff.ms}`
 	// counterBox.innerHTML = ""
-	for (const [key, value] of Object.entries(timeDiff)) {
-		let val = '' ? '0' : value
-		let container = document.querySelector(`.${key}`)
-		if (container.textContent != val)
-			container.textContent = val
-		//counterBox.innerHTML += `<span class="${key}" data-key="${key}">${value}</span>`
-	}
-}, 10)
+	setTimerObj();
+}, 1000)
 
 // let nowDate = new Date()
 // let timeDiff = countdown(nowDate, endDate)
 // console.log(timeDiff)
+
+function setTimerObj() {
+	let nowDate = new Date()
+	let timeDiff = countdown(nowDate, endDate)
+	for (const [key, value] of Object.entries(timeDiff)) {
+		let val = '' ? '0' : value
+		let bgContainer = document.querySelector(`.bg-${key}`)
+		let container = document.querySelector(`.${key}`)
+		console.log(`.bg-${key}`)
+		if (container.textContent != val)
+			container.textContent = val
+			bgContainer.style.setProperty('--timeVal', val);
+		//counterBox.innerHTML += `<span class="${key}" data-key="${key}">${value}</span>`
+	}
+}
 
 
 function countdown(fromDate, targetDate) {
@@ -34,5 +44,5 @@ function countdown(fromDate, targetDate) {
 	let secs = Math.floor(duration / 1000) % 60
 	let ms = String(Math.floor(duration) % 1000).padStart(2, '0')
 
-	return { "years": years, "months": months, "days": days, "hours": hours, "minutes": mins, "seconds": secs, "ms": ms }
+	return { "years": years, "months": months, "days": days, "hours": hours, "minutes": mins, "seconds": secs }
 }
