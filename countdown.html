@@ -39,23 +39,37 @@
 				bottom: 0;
 				left: 0;
 				display: flex;
-				align-items:flex-end;
+				align-items: flex-end;
 			}
 
 			#bg span {
 				display: block;
-				min-height:1px;
-				height:calc((var(--timeVal) / var(--totalVal)) * 100%);
-				background:#fbfbfb;
-				width:calc(100% / 6);
-				transition:height 0.65s;
+				min-height: 1px;
+				height: calc((var(--timeVal) / var(--totalVal)) * 100%);
+				background: #fbfbfb;
+				width: calc(100% / 6);
+				transition: height 0.65s;
+				border-top: 1px solid #f1f1f1;
+				position: relative;
+			}
+
+			#bg span:after {
+				content: attr(data-val);
+				position: absolute;
+				left: 0;
+				width: 100%;
+				text-align: center;
+				top: -20px;
+				font-size: 1.2rem;
+				color: #e2e2e2;
+				letter-spacing:0.05em;
 			}
 
 			#counter {
 				font-size: 3.2rem;
-				border-radius:10px;
-				padding:12px;
-				background-color:#fff;
+				border-radius: 10px;
+				padding: 12px;
+				background-color: #fff;
 			}
 
 			#counter span {
@@ -96,12 +110,37 @@
 	</head>
 	<body>
 		<div id="bg">
-			<span class="bg-years" data-key="years"></span>
-			<span class="bg-months" data-key="months" style="--totalVal: 12;"></span>
-			<span class="bg-days" data-key="days" style="--totalVal: 31;"></span>
-			<span class="bg-hours" data-key="hours" style="--totalVal: 24;"></span>
-			<span class="bg-minutes" data-key="minutes" style="--totalVal: 60;"></span>
-			<span class="bg-seconds" data-key="seconds" style="--totalVal: 60;"></span>
+			<span class="bg-years" data-key="years" data-val="-"></span>
+			<span
+				class="bg-months"
+				data-key="months"
+				data-val="-"
+				style="--totalVal: 12"
+			></span>
+			<span
+				class="bg-days"
+				data-key="days"
+				data-val="-"
+				style="--totalVal: 31"
+			></span>
+			<span
+				class="bg-hours"
+				data-key="hours"
+				data-val="-"
+				style="--totalVal: 24"
+			></span>
+			<span
+				class="bg-minutes"
+				data-key="minutes"
+				data-val="-"
+				style="--totalVal: 60"
+			></span>
+			<span
+				class="bg-seconds"
+				data-key="seconds"
+				data-val="-"
+				style="--totalVal: 60"
+			></span>
 		</div>
 		<div id="counter">
 			<span class="years" data-key="years">-</span>

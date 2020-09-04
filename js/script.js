@@ -25,6 +25,7 @@ function setTimerObj() {
 		if (container.textContent != val)
 			container.textContent = val
 			bgContainer.style.setProperty('--timeVal', val);
+			bgContainer.setAttribute('data-val', val);
 		//counterBox.innerHTML += `<span class="${key}" data-key="${key}">${value}</span>`
 	}
 }
