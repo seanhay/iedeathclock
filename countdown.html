@@ -30,6 +30,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				background-color:#263238;
 			}
 
 			#bg {
@@ -46,10 +47,10 @@
 				display: block;
 				min-height: 1px;
 				height: calc((var(--timeVal) / var(--totalVal)) * 100%);
-				background: #fbfbfb;
+				background: rgba(255,255,255,0.02);
 				width: calc(100% / 6);
 				transition: height 0.65s;
-				border-top: 1px solid #f1f1f1;
+				border-top: 1px solid rgba(255,255,255,0.075);
 				position: relative;
 			}
 
@@ -61,7 +62,7 @@
 				text-align: center;
 				top: -20px;
 				font-size: 1.2rem;
-				color: #e2e2e2;
+				color: #455A64;
 				letter-spacing:0.05em;
 			}
 
@@ -69,20 +70,21 @@
 				font-size: 3.2rem;
 				border-radius: 10px;
 				padding: 12px;
-				background-color: #fff;
+				/* background-color: #fff; */
 			}
 
 			#counter span {
 				padding: 8px 10px;
 				border-top-left-radius: 6px;
 				border-bottom-left-radius: 4px;
-				background-color: #f1f1f1;
+				background-color: #90A4AE;
 				margin-right: 5px;
 				position: relative;
-				border-right: 1px solid #000;
+				border-right: 1px solid #FFF;
 				display: inline-block;
 				text-align: center;
 				min-width: 62px;
+				color:#37474F;
 			}
 
 			#counter span:after {
@@ -94,9 +96,10 @@
 				left: calc(100%);
 				transform: rotate3d(0, 0, 1, -45deg) translateY(0.5px);
 				transform-origin: 0 100%;
-				border-bottom: 1px solid #000;
+				border-bottom: 1px solid #FFF;
 				padding-bottom: 3px;
 				letter-spacing: 0.05em;
+				color:#FFF;
 			}
 
 			#counter span:last-child {
