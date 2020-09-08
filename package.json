@@ -1,6 +1,6 @@
 {
 	"name": "ie-death-countdown",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "New tab extension to keep track of IE11 end-of-life",
 	"main": "countdown.html",
 	"scripts": {
