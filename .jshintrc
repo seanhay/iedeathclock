@@ -1,0 +1,12 @@
+{
+	"asi": true,
+	"browser": true,
+	"devel": true,
+	"undef": true,
+	"unused": true,
+	"esversion": 6,
+	"globals": {
+		"MY_GLOBAL": true,
+		"$": true
+	}
+}

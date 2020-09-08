@@ -1,18 +1,12 @@
 const endDate = new Date("2021-08-17")
-let counterBox = document.getElementById("counter")
-let bgBox = document.getElementById("bg")
+// let counterBox = document.getElementById("counter")
+// let bgBox = document.getElementById("bg")
 
 setTimerObj()
 
 setInterval(() => {
-	// counterBox.textContent = `${timeDiff.years}/${timeDiff.months}/${timeDiff.days}/${timeDiff.hours}/${timeDiff.minutes}/${timeDiff.seconds}/${timeDiff.ms}`
-	// counterBox.innerHTML = ""
 	setTimerObj();
 }, 1000)
-
-// let nowDate = new Date()
-// let timeDiff = countdown(nowDate, endDate)
-// console.log(timeDiff)
 
 function setTimerObj() {
 	let nowDate = new Date()
@@ -26,7 +20,6 @@ function setTimerObj() {
 			container.textContent = val
 			bgContainer.style.setProperty('--timeVal', val);
 			bgContainer.setAttribute('data-val', val);
-		//counterBox.innerHTML += `<span class="${key}" data-key="${key}">${value}</span>`
 	}
 }
 
@@ -43,7 +36,7 @@ function countdown(fromDate, targetDate) {
 	let hours = Math.floor(duration / 3.6e+6) % 24
 	let mins = Math.floor(duration / 60000) % 60
 	let secs = Math.floor(duration / 1000) % 60
-	let ms = String(Math.floor(duration) % 1000).padStart(2, '0')
+	// let ms = String(Math.floor(duration) % 1000).padStart(2, '0')
 
 	return { "years": years, "months": months, "days": days, "hours": hours, "minutes": mins, "seconds": secs }
 }

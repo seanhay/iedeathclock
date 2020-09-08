@@ -1,0 +1,32 @@
+{
+	"name": "ie-death-countdown",
+	"version": "0.1.0",
+	"description": "New tab extension to keep track of IE11 end-of-life",
+	"main": "countdown.html",
+	"scripts": {
+		"scss": "node-sass -w assets/scss -o assets/css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@gitlab.com/sean.hay/ie-death-timer.git"
+	},
+	"keywords": [
+		"newtab",
+		"extension",
+		"ie",
+		"ie11",
+		"eol",
+		"chrome",
+		"edge",
+		"chromium"
+	],
+	"author": "Sean Hay",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://gitlab.com/sean.hay/ie-death-timer/issues"
+	},
+	"homepage": "https://gitlab.com/sean.hay/ie-death-timer#readme",
+	"devDependencies": {
+		"node-sass": "^4.14.1"
+	}
+}
