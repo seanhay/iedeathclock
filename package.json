@@ -4,7 +4,7 @@
 	"description": "New tab extension to keep track of IE11 end-of-life",
 	"main": "countdown.html",
 	"scripts": {
-		"scss": "node-sass -w assets/scss -o assets/css"
+		"scss": "sass assets/scss assets/css -w"
 	},
 	"repository": {
 		"type": "git",
@@ -27,6 +27,6 @@
 	},
 	"homepage": "https://gitlab.com/sean.hay/ie-death-timer#readme",
 	"devDependencies": {
-		"node-sass": "^7.0.1"
+		"sass": "^1.51.0"
 	}
 }
