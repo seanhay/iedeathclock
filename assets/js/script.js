@@ -1,4 +1,4 @@
-const endDate = new Date("2021-08-17")
+const endDate = new Date("2022-06-15")
 // let counterBox = document.getElementById("counter")
 // let bgBox = document.getElementById("bg")
 
