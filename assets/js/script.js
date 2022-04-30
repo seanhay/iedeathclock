@@ -1,6 +1,4 @@
-const endDate = new Date("2022-06-15")
-// let counterBox = document.getElementById("counter")
-// let bgBox = document.getElementById("bg")
+const endDate = new Date("2022-06-15T00:00:00.000-07:00")
 
 setTimerObj()
 
