@@ -4,7 +4,7 @@
 	"description": "New tab extension to keep track of IE11 end-of-life",
 	"main": "countdown.html",
 	"scripts": {
-		"scss": "sass assets/scss assets/css -w"
+		"scss": "sass assets/scss:assets/css -w"
 	},
 	"repository": {
 		"type": "git",
