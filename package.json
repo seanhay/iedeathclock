@@ -27,6 +27,8 @@
 	},
 	"homepage": "https://gitlab.com/sean.hay/ie-death-timer#readme",
 	"devDependencies": {
-		"sass": "^1.51.0"
+		"postcss": "^8.4.13",
+		"postcss-cli": "^9.1.0",
+		"postcss-nested": "^5.0.6"
 	}
 }
